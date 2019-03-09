@@ -1,5 +1,5 @@
 #!groovy
-@Library('devops-library') _
+@Library('devops-demo') _
 
 def tools = new org.devops.tools()
 
