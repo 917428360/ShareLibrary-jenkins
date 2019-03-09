@@ -20,11 +20,9 @@ def Salt(salthost,saltfunc,saltargs) {
 def WebDeploy(user,serviceName,targetDir){
     try {
         println('清空发布目录')
-        try {
-            Salt(targetHosts,'cmd.run', "cmd=\" rm -fr  ${targetDir}/* \"")
-        } catch(e) {
-            println('delete')
-        }
+        
+        Salt(targetHosts,'cmd.run', "cmd=\" rm -fr  ${targetDir}/* \"")
+        
         println('发布软件包')
         Salt(targetHosts,'cp.get_file', "salt://${JOB_NAME}/${serviceName}.tar.gz ${targetDir}/${serviceName}.tar.gz makedirs=True ")
         sleep 2;
