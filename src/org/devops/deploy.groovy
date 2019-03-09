@@ -8,8 +8,8 @@ def Salt(salthost,saltfunc,saltargs) {
                                         function: saltfunc, 
                                         target: salthost, 
                                         targettype: 'list'),
-                credentialsId: "c4ec3410-7f97-40fa-8ad9-be38a7bbbcd8", 
-                servername: "http://127.0.0.1:8000")
+                credentialsId: "f89abde3-49f0-4b75-917e-c4e49c483f4f", 
+                servername: "http://127.0.0.1:9000")
     println(result)
     //PrintMes(result,'blue')
     return  result
