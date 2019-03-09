@@ -3,16 +3,20 @@ package org.devops
 
 //saltapi模板
 def Salt(salthost,saltfunc,saltargs) {
-    result = salt(authtype: 'pam', 
+    /*result = salt(authtype: 'pam', 
                 clientInterface: local( arguments: saltargs,
                                         function: saltfunc, 
                                         target: salthost, 
                                         targettype: 'list'),
                 credentialsId: "f89abde3-49f0-4b75-917e-c4e49c483f4f", 
-                servername: "http://127.0.0.1:9000")
-    println(result)
+                servername: "http://127.0.0.1:9000")*/
+    
+    sh """
+        salt ${salthost} ${saltfunc} ${saltargs}
+        """
+    //println(result)
     //PrintMes(result,'blue')
-    return  result
+    //return  result
 }
 
 
