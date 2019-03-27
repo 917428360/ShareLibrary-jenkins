@@ -12,7 +12,7 @@ String tagName = "${env.tagName}".trim()
 String moduleName = "${env.moduleName}".trim()
 
 //Global 
-String workspace = "/opt/jenkins/workspace"
+String workspace = "/var/lib/jenkins/workspace"
 String targetHosts = "${env.targetHosts}".trim()
 String jobType = "${JOB_NAME}".split('_')[-1]
 String credentialsId = "24982560-17fc-4589-819b-bc5bea89da77"
@@ -83,7 +83,8 @@ ansiColor('xterm') {
                         break;
                         
                     case 'Tomcat':
-                        def tomcatDir=targetDir + "/${port}/webapps/"
+                        //def tomcatDir=targetDir + "/${port}/webapps/"
+                        def tomcatDir=targetDir
                         deploy.JavaDeploy('Tomcat','war',srcDir,user,targetHosts,tomcatDir,port)
                         break;
                         
