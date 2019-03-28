@@ -60,14 +60,13 @@ ansiColor('xterm') {
                         def webDist=srcDir + '/dist'
                         sh " PATH=$PATH:/usr/local/node-v10.15.3-linux-x64/bin && cd ${srcDir} && ${buildShell} && cd -"
                         build.WebBuild(webDist,serviceName)
-                    } else if ("${midwareType}" == "Tomcat"){
-                        build.Build(javaVersion,buildType,buildDir,buildShell)
+                    } 
                     else {
                         build.Build(javaVersion,buildType,buildDir,buildShell)
                     }
                 }catch(e){
-                    currentBuild.description='运行打包失败！'
-                    error '运行打包失败！'
+                    currentBuild.description='运行打包失败啊！'
+                    error '运行打包失败啊！'
                 }
             }
             
