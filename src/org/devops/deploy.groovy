@@ -49,7 +49,7 @@ def WebDeploy(user,serviceName,targetDir){
     }
 }
 
-def JavaDeploy('Tomcat','war',srcDir,user,targetHosts,tomcatDir,port){
+def JavaDeploy(Tomcat,war,srcDir,user,targetHosts,tomcatDir,port){
     try {
         println('我还没写完啦！')
     } catch (e){
