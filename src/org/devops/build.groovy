@@ -18,9 +18,9 @@ def Build(javaVersion,buildType,buildDir,buildShell){
     //选择JDK版本
     jdkPath = ['jdk7' : '/usr/local/jdk1.7.0_79',
                'jdk6' : '/usr/local/jdk1.6.0_45',
-               'jdk8' : '/usr/java/jdk1.8.0_111',
+               'jdk8' : '/usr/local/jdk1.8.0_201',
                'jdk11': '/usr/local/jdk-11.0.1',
-               'null' : '/usr/java/jdk1.8.0_111']
+               'null' : '/usr/local/jdk1.8.0_201']
     def javaHome = jdkPath["$javaVersion"]
     if ("$javaVersion" == 'jdk11'){
        sh  """
