@@ -69,6 +69,7 @@ ansiColor('xterm') {
             
                    if ("${midwareType}" == "Tomcat"){
                       //  error '运行打包tomcat！'
+                        def build = new org.devops.build()
                         build.Build(javaVersion,buildType,buildDir,buildShell)
                     
             }
