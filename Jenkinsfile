@@ -12,7 +12,7 @@ String tagName = "${env.tagName}".trim()
 String moduleName = "${env.moduleName}".trim()
 
 //Global 
-String workspace = "/var/lib/jenkins/workspace"
+String workspace = "/var/lib/jenkins/workspace/${env.serviceName}"
 String targetHosts = "${env.targetHosts}".trim()
 String jobType = "${JOB_NAME}".split('_')[-1]
 String credentialsId = "2ec7115a-bada-42bb-a3c4-bd9dd8a49af4"
