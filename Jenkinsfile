@@ -62,6 +62,8 @@ ansiColor('xterm') {
                         build.WebBuild(webDist,serviceName)
                     } else if ("${midwareType}" == "Tomcat"){
                         build.Build(javaVersion,buildType,buildDir,buildShell)
+                    } else {
+                        error '暂时未定义！'
                     }
                 }catch(e){
                     currentBuild.description='运行打包失败啊！'
