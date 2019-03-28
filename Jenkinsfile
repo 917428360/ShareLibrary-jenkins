@@ -58,7 +58,7 @@ ansiColor('xterm') {
                     
                     } else if ("${midwareType}" == "NodeJs"){
                         def webDist=srcDir + '/dist'
-                        sh " cd ${srcDir} && ${buildShell} && cd -"
+                        sh " PATH=$PATH:/usr/local/node-v10.15.3-linux-x64/bin && cd ${srcDir} && ${buildShell} && cd -"
                         build.WebBuild(webDist,serviceName)
                     }
                     else {
