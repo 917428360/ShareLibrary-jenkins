@@ -61,7 +61,7 @@ ansiColor('xterm') {
                         sh " PATH=$PATH:/usr/local/node-v10.15.3-linux-x64/bin && cd ${srcDir} && ${buildShell} && cd -"
                         build.WebBuild(webDist,serviceName)
                     } 
-                    else {
+                    else if ("${midwareType}" == "Tomcat"){{
                         build.Build(javaVersion,buildType,buildDir,buildShell)
                     }
                 }catch(e){
