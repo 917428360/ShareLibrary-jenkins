@@ -3,7 +3,7 @@ package org.devops
 //构建打包
 def Build(javaVersion,buildType,buildDir,buildShell){
     if (buildType == 'maven'){
-        Home = tool '/usr/local/apache-maven'
+        Home = tool '/usr/local/apache-maven-3.6.0'
         buildHome = "${Home}/bin/mvn"
     } else if (buildType == 'ant'){
         Home = tool 'ANT'
